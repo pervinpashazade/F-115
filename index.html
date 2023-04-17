@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn">Open sidebar</button>
+
+        <div class="box"></div>
+    </div>
+
+    <div class="drawer">
+        <button class="close">
+            close
+        </button>
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const drawer = document.querySelector(".drawer")
+        const close_btn = document.querySelector(".drawer button.close")
+
+        btn.addEventListener("click", () => {
+            drawer.classList.add("open")
+        })
+
+        close_btn.addEventListener("click", () => {
+            drawer.classList.remove("open")
+        })
+
+    </script>
+</body>
+
+</html>
