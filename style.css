@@ -26,6 +26,10 @@
     right: 1rem;
 }
 
+#btn {
+    margin-bottom: 2rem;
+}
+
 .d-none {
     display: none !important;
 }
@@ -33,11 +37,62 @@
 .box {
     width: 200px;
     height: 200px;
-    background-color: green;
+    /* background-color: green; */
     margin: 2rem auto;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    position: relative;
 }
 
 .box:hover {
     background-color: yellow;
 }
+
+.box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    inset: 0;
+}
+
+span.text {
+    position: relative;
+    display: inline-block;
+    /* padding-bottom: 1rem; */
+    /* text-decoration: underline; */
+    /* border-bottom: 1px solid #000; */
+}
+
+span.text::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #000;
+}
+
+/* span.text::before {
+    content: "salam";
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+}
+
+span.text::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+} */
